@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 
 try:
-    import os.path as path
-    from importlib.resources import files
-    def resource_filename(anchor, resources):
-        return path.join(files(anchor), resources)
+    from importlib.resources import path as resource_filename
 except ImportError:
     from pkg_resources import resource_filename
 
