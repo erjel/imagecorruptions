@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import importlib
-import importlib.resources
 import os
 
 import numpy as np
@@ -339,16 +337,15 @@ def frost(x, severity=1):
     idx = np.random.randint(6)
 
     filenames = [
-        'frost1.png',
-        'frost2.png',
-        'frost3.png', 
-        'frost4.jpg',
-        'frost5.jpg',
-        'frost6.jpg'
+        'frost/frost1.png',
+        'frost/frost2.png',
+        'frost/frost3.png', 
+        'frost/frost4.jpg',
+        'frost/frost5.jpg',
+        'frost/frost6.jpg'
     ]
     
-    with importlib.resources.path(imagecorruptions, 'frost') as resource_path:
-        frost = cv2.imread(os.path.join(resource_path, filenames[idx]))
+    frost = cv2.imread(os.path.join(imagecorruptions.__path__[0], filenames[idx]))
     frost_shape = frost.shape
     x_shape = np.array(x).shape
 
