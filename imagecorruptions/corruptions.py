@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-try:
-    from importlib.resources import path as resource_filename
-except ImportError:
-    from pkg_resources import resource_filename
+import importlib
+import importlib.resources
+import os
 
 import numpy as np
 import math
@@ -18,6 +17,8 @@ import cv2
 from scipy.ndimage import zoom as scizoom
 from scipy.ndimage.interpolation import map_coordinates
 from numba import njit
+
+import imagecorruptions
 
 SK_VERSION = {k:int(v) for k,v in zip(['major', 'minor'], sk.__version__.split('.')[:2])}
 
@@ -338,16 +339,16 @@ def frost(x, severity=1):
     idx = np.random.randint(6)
 
     filenames = [
-        './frost/frost1.png',
-        './frost/frost2.png',
-        './frost/frost3.png', 
-        './frost/frost4.jpg',
-        './frost/frost5.jpg',
-        './frost/frost6.jpg'
+        'frost1.png',
+        'frost2.png',
+        'frost3.png', 
+        'frost4.jpg',
+        'frost5.jpg',
+        'frost6.jpg'
     ]
     
-    file_path = resource_filename(__name__, filenames[idx])
-    frost = cv2.imread(file_path)
+    with importlib.resources.path(imagecorruptions, 'frost') as resource_path:
+        frost = cv2.imread(os.path.join(resource_path, filenames[idx]))
     frost_shape = frost.shape
     x_shape = np.array(x).shape
 
