@@ -1,0 +1,17 @@
+imagecorruptions-imaug
+Copyright 2024 imaug
+
+The imagecorruptions-imaug package
+(https://github.com/imaug/imagecorruptions) is a fork of the imagecorruptions
+package and contains modifications created by the imaug team (https://github.com/imaug).
+
+The imagecorruptions package (https://github.com/bethgelab/imagecorruptions) is an
+extension of the robustness script collection and was create by Evgenia Rusak
+and Benjamin Mitzkus as members of the Bethge Lab (https://bethgelab.org/).
+Copyright 2019 - 2024 Evgenia Rusak. All Rights Reserved.
+Copyright 2019 - 2024 Benjamin Mitzkus. All Rights Reserved.
+
+The robustness script collection (https://github.com/hendrycks/robustness)
+was created by Dan Hendrycks.
+Copyright 2018 - 2022 Dan Hendrycks. All Rights Reserved.
+
