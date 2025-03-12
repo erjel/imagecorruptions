@@ -10,13 +10,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="imagecorruptions",
-    version="1.1.2",
-    author="Evgenia Rusak, Benjamin Mitzkus",
-    author_email="evgenia.rusak@bethgelab.org, benjamin.mitzkus@bethgelab.org",
+    version="1.1.3",
+    author="imaug",
+    author_email="ej_foss@mailbox.org",
     description="This package provides a set of image corruptions.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/bethgelab/imagecorruptions",
+    url="https://github.com/imaug/imagecorruptions",
     packages=setuptools.find_packages(),
     install_requires=[
           'numpy >= 1.16',
