@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="imagecorruptions-imaug",
-    version="1.1.3rc0",
+    version="1.1.3rc1",
     author="imaug",
     author_email="ej_foss@mailbox.org",
     description="This package provides a set of image corruptions.",
