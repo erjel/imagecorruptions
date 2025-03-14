@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="imagecorruptions-imaug",
-    version="1.1.3",
+    version="1.1.3rc0",
     author="imaug",
     author_email="ej_foss@mailbox.org",
     description="This package provides a set of image corruptions.",
@@ -24,7 +24,8 @@ setuptools.setup(
           'scikit-image >= 0.15',
           'opencv-python >= 3.4.5',
           'scipy >= 1.2.1',
-          'numba >= 0.53.0'
+          'numba >= 0.53.0',
+          'setuptools ; python_version >= "3.12"',
     ],
     include_package_data=True,
     classifiers=[
